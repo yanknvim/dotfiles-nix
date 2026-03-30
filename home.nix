@@ -45,6 +45,8 @@
         fcitx5.addons = [ pkgs.fcitx5-mozc ];
     };
 
+    home.file.".vimrc".source = ./.vimrc;
+
 
     home.stateVersion = "25.11";
     programs.home-manager.enable = true;
