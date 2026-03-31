@@ -9,6 +9,7 @@
         ./starship.nix
         ./btop.nix
         ./zellij.nix
+        ./direnv.nix
     ];
 
 

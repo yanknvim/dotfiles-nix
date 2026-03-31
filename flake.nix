@@ -31,7 +31,7 @@
                         extraSpecialArgs = { inherit inputs; };
                         users.yank = {
                             imports = [
-                                ./home/home.nix
+                                ./home
                             ];
                         };
                     };
