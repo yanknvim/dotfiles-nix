@@ -7,5 +7,9 @@
             name = "yank.nvim";
             email = "yanknvim@gmail.com";
         };
+
+        settings.init = {
+            defaultBranch = "main";
+        };
     };
 }
