@@ -22,6 +22,8 @@
         skkDictionaries.l
         skkDictionaries.emoji
         spotify
+        opencode
+        rustup
     ];
 
     programs.vim.enable = true;
