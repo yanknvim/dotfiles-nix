@@ -32,6 +32,7 @@
             nvim-autopairs
         ];
         extraPackages = with pkgs; [
+            clang-tools
             lua-language-server
             rust-analyzer
             nil

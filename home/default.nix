@@ -25,6 +25,7 @@
         spotify
         opencode
         rustup
+        radare2
     ];
 
     programs.vim.enable = true;

@@ -2,6 +2,7 @@
     programs.foot = {
         enable = true;
         settings = {
+            main.shell = "zsh";
             main.font = "MonaspiceAr NFM:size=12";
             csd.preferred = "none";
             colors-dark = {

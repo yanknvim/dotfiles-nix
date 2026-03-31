@@ -7,6 +7,7 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
         skkeleton = {
             url = "github:vim-skk/skkeleton";
             flake = false;
@@ -21,6 +22,7 @@
                 {
                     nixpkgs.overlays = [
                         (import ./overlays/skkeleton.nix { inherit inputs; })
+                        inputs.neovim-nightly-overlay.overlays.default
                     ];
                 }
                 home-manager.nixosModules.default
