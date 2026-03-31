@@ -7,6 +7,10 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        skkeleton = {
+            url = "github:vim-skk/skkeleton";
+            flake = false;
+        };
     };
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -14,6 +18,11 @@
             specialArgs = { inherit inputs; };
             modules = [
                 ./configuration.nix
+                {
+                    nixpkgs.overlays = [
+                        (import ./overlays/skkeleton.nix { inherit inputs; })
+                    ];
+                }
                 home-manager.nixosModules.default
                 {
                     home-manager = {
@@ -22,7 +31,7 @@
                         extraSpecialArgs = { inherit inputs; };
                         users.yank = {
                             imports = [
-                                ./home.nix
+                                ./home/home.nix
                             ];
                         };
                     };
