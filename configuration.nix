@@ -87,9 +87,11 @@
   users.users.yank = {
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "render" ];
+    shell = pkgs.zsh;
   };
 
-  # programs.firefox.enable = true;
+  programs.firefox.enable = true;
+  programs.zsh.enable = true;
   
   programs.niri.enable = true;
 
@@ -104,6 +106,11 @@
 
   services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
+
+  environment.cosmic.excludePackages = with pkgs; [
+    cosmic-term
+    cosmic-edit
+  ];
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -128,7 +135,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
