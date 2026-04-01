@@ -28,6 +28,7 @@
         opencode
         rustup
         radare2
+        nixfmt
     ];
 
     programs.vim.enable = true;
