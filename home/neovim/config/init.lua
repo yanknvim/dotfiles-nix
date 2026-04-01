@@ -1,8 +1,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("lze").load("plugins");
+require("keymap")
+
 require("lsp")
+
+require("lze").load("plugins");
+
+require("extui")
 
 vim.cmd[[colorscheme tokyonight-storm]]
 

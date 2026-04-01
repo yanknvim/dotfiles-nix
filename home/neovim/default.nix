@@ -8,8 +8,12 @@
             tokyonight-nvim
 
             denops-vim
+            plenary-nvim
 
             nvim-web-devicons
+
+            telescope-nvim
+            telescope-fzf-native-nvim
 
             rainbow-delimiters-nvim
 
@@ -20,14 +24,17 @@
             lualine-nvim
             gitsigns-nvim
 
+            toggleterm-nvim
+
             flash-nvim
 
             nvim-lspconfig
+            lazydev-nvim
             blink-cmp
 
             skkeleton
 
-            nvim-treesitter
+            nvim-treesitter.withAllGrammars
             
             nvim-autopairs
         ];
@@ -36,7 +43,15 @@
             lua-language-server
             rust-analyzer
             nil
+
+            fzf
+            ripgrep
+
             deno
+
+            skkDictionaries.l
+
+            lazygit
         ];
     };
     xdg.configFile."nvim".source = ./config;

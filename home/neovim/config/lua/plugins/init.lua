@@ -8,5 +8,8 @@ return {
     { import = "plugins.treesitter" },
     { import = "plugins.rainbow-delimiters" },
     { import = "plugins.tree" },
+    { import = "plugins.lazydev" },
+    { import = "plugins.telescope" },
+    { import = "plugins.toggleterm" },
 }
 

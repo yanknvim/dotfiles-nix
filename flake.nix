@@ -18,7 +18,7 @@
         nixosConfigurations.sana = nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
-                ./configuration.nix
+                ./hosts/sana
                 {
                     nixpkgs.overlays = [
                         (import ./overlays/skkeleton.nix { inherit inputs; })
