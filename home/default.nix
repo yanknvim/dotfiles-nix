@@ -26,7 +26,6 @@
         skkDictionaries.emoji
         spotify
         opencode
-        rustup
         radare2
         nixfmt
     ];
