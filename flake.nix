@@ -20,10 +20,15 @@
             modules = [
                 ./hosts/sana
                 {
-                    nixpkgs.overlays = [
-                        (import ./overlays/skkeleton.nix { inherit inputs; })
-                        inputs.neovim-nightly-overlay.overlays.default
-                    ];
+                    nixpkgs = {
+                        overlays = [
+                            (import ./overlays/skkeleton.nix { inherit inputs; })
+                            inputs.neovim-nightly-overlay.overlays.default
+                        ];
+                        config = {
+                            allowUnfree = true;
+                        };
+                    };
                 }
                 home-manager.nixosModules.default
                 {
