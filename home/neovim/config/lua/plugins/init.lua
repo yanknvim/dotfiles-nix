@@ -11,5 +11,6 @@ return {
     { import = "plugins.lazydev" },
     { import = "plugins.telescope" },
     { import = "plugins.toggleterm" },
+    { import = "plugins.indent-blankline" },
 }
 

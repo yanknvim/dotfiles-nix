@@ -16,6 +16,7 @@
             telescope-fzf-native-nvim
 
             rainbow-delimiters-nvim
+            indent-blankline-nvim
 
             nvim-tree-lua
 
